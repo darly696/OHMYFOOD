@@ -1,0 +1,21 @@
+.button {
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  color: #fff;
+  transition: 0, 3s;
+}
+.button:hover {
+  background: linear-gradient(to bottom, #ae80e5, #fface8);
+  box-shadow: 0 4px 15px 0 #f6f6f6, 0 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.button:focus, .button:active {
+  background: linear-gradient(to bottom, #782cd3, #ff46cc);
+}
+
+body {
+  font-size: "Shrikhand", cursive;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+}/*# sourceMappingURL=Menu à la française.css.map */

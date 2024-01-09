@@ -1,0 +1,11 @@
+@import 'Variables';
+@import 'button';
+
+body {
+    font-size: $body-font;
+}
+.footer {
+    background-color: $background-color-footer;
+    color: $text-color-footer;
+  
+  }

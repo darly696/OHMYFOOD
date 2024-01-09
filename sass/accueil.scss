@@ -1,0 +1,26 @@
+@import 'mini-reset';
+@import 'Variables';
+@import 'button';
+body {
+    font-size: $body-font;
+}
+.présentation {
+    background-color: $background-color-accueil;
+    color: $text-color-accueil;
+    transition: $transition;
+
+&:hover {
+   background-color: lighten($background-color-accueil, 10%);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.button-accueil {
+    @extend .button;
+}
+}
+.fonctionnement {
+    background-color: $background-color-accueil;
+
+}
+.Restaurants {
+background-color: #f6f6f6;
+}

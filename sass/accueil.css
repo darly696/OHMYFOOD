@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+.button, .présentation .button-accueil {
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  color: #fff;
+  transition: 0, 3s;
+}
+.button:hover, .présentation .button-accueil:hover {
+  background: linear-gradient(to bottom, #ae80e5, #fface8);
+  box-shadow: 0 4px 15px 0 #f6f6f6, 0 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.button:focus, .présentation .button-accueil:focus, .button:active, .présentation .button-accueil:active {
+  background: linear-gradient(to bottom, #782cd3, #ff46cc);
+}
+
+body {
+  font-size: "Shrikhand", cursive;
+}
+
+.présentation {
+  background-color: #fff;
+  color: #000;
+  transition: 0, 3s;
+}
+.présentation:hover {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.fonctionnement {
+  background-color: #fff;
+}
+
+.Restaurants {
+  background-color: #f6f6f6;
+}/*# sourceMappingURL=accueil.css.map */
