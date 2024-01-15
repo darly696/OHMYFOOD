@@ -1,21 +1,118 @@
-.button {
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
-  color: #fff;
-  transition: 0, 3s;
-}
-.button:hover {
-  background: linear-gradient(to bottom, #ae80e5, #fface8);
-  box-shadow: 0 4px 15px 0 #f6f6f6, 0 0 0 4px rgba(0, 0, 0, 0.15);
-}
-.button:focus, .button:active {
-  background: linear-gradient(to bottom, #782cd3, #ff46cc);
-}
-
+@charset "UTF-8";
 body {
   font-size: "Shrikhand", cursive;
+  position: relative;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  width: 40%;
+  margin: 20px auto 20px;
+  display: block;
+}
+header i {
+  color: black;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+}
+main img {
+  width: 100%;
+  height: auto;
+}
+main .background-section {
+  position: absolute;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  top: 190px;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+main .background-section .title {
+  display: inline-flex;
+  font-family: Shrikhand;
+  padding: 20px;
+  font-weight: 400;
+  font-size: 28px;
+}
+main .background-section .title i {
+  margin-left: 70px;
+}
+main .background-section .section h2, main .background-section .Entrées h2, main .background-section .Plats h2, main .background-section .Désserts h2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  margin: auto;
+}
+main .background-section .section ul, main .background-section .Entrées ul, main .background-section .Plats ul, main .background-section .Désserts ul {
+  list-style: none;
+  padding: 0;
+}
+main .background-section .section li, main .background-section .Entrées li, main .background-section .Plats li, main .background-section .Désserts li {
+  background-color: #fff;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 69px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+main .background-section .section h3, main .background-section .Entrées h3, main .background-section .Plats h3, main .background-section .Désserts h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Roboto;
+}
+main .background-section .section p, main .background-section .Entrées p, main .background-section .Plats p, main .background-section .Désserts p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 300;
+}
+main .background-section .section .Price, main .background-section .Entrées .Price, main .background-section .Plats .Price, main .background-section .Désserts .Price {
+  margin-left: 50px;
+}
+main .background-section .button {
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px 0, rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  width: 20%;
+  margin-left: 30%;
+  margin-bottom: 40px;
+}
 .footer {
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: #000;
   color: #fff;
+}
+.footer h3 {
+  margin-left: 50px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  margin-bottom: 7px;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Roboto;
 }/*# sourceMappingURL=Menu à la française.css.map */

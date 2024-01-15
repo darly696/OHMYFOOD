@@ -1,79 +1,205 @@
 @charset "UTF-8";
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button, input, select {
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img, video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th {
-  padding: 0;
-}
-
-.button, .présentation .button-accueil {
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
-  color: #fff;
-  transition: 0, 3s;
-}
-.button:hover, .présentation .button-accueil:hover {
-  background: linear-gradient(to bottom, #ae80e5, #fface8);
-  box-shadow: 0 4px 15px 0 #f6f6f6, 0 0 0 4px rgba(0, 0, 0, 0.15);
-}
-.button:focus, .présentation .button-accueil:focus, .button:active, .présentation .button-accueil:active {
-  background: linear-gradient(to bottom, #782cd3, #ff46cc);
-}
-
 body {
   font-size: "Shrikhand", cursive;
 }
 
+header {
+  text-align: center;
+}
+header img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 14px 89px 13px 89px;
+}
+header .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  height: 50px;
+  gap: 17px;
+}
+header .location input {
+  border: none;
+  background-color: #eaeaea;
+  color: #353535;
+  font-weight: bold;
+  align-self: center;
+  font-size: 15px;
+}
+
 .présentation {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
   color: #000;
-  transition: 0, 3s;
+  transition: 0.3s;
 }
-.présentation:hover {
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.présentation h1 {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
 }
+.présentation p {
+  font-size: 20px;
+  font-weight: 300;
+  color: f6f6f6;
+  height: 46px;
+  margin: 0;
+}
+.présentation .button {
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .fonctionnement {
   background-color: #fff;
+  margin-right: 20px;
+}
+.fonctionnement h2 {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.fonctionnement ol {
+  list-style: none;
+  counter-reset: item;
+}
+.fonctionnement li {
+  display: flex;
+  background-color: f6f6f6;
+  border-radius: 28px;
+  box-shadow: 0 4px 15px 0, rgba(0, 0, 0, 0.15);
+  height: 73px;
+  margin-bottom: 20px;
+  align-items: center;
+  position: relative;
+}
+.fonctionnement li::before {
+  content: counter(item);
+  counter-increment: item;
+  display: block;
+  position: absolute;
+  left: -1px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+}
+.fonctionnement li i {
+  margin-right: 10px;
+  margin-left: 25px;
+}
+.fonctionnement li span {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .Restaurants {
-  background-color: #f6f6f6;
+  background-color: f6f6f6;
+}
+.Restaurants h2 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-left: 15px;
+}
+.Restaurants ul {
+  list-style: none;
+  padding: 0;
+}
+.Restaurants li {
+  margin-bottom: 20px;
+}
+.Restaurants a.like-button {
+  display: block;
+  text-decoration: none;
+}
+.Restaurants figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+}
+.Restaurants figure img {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  margin: 0;
+}
+.Restaurants figure .badge {
+  background-color: #99e2d0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+}
+.Restaurants figure figcaption {
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 20px;
+  margin-top: -20px;
+  position: relative;
+}
+.Restaurants figure figcaption h3 {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  gap: 10px;
+  align-items: center;
+}
+.Restaurants figure figcaption i {
+  color: #fff;
+}
+.Restaurants figure figcaption p {
+  color: #000;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #000;
+  color: #000;
+}
+footer h3 {
+  color: #fff;
+  margin-left: 40px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul a {
+  text-decoration: none;
+  color: #000;
+  gap: 10px;
+}
+footer ul i {
+  color: #fff;
 }/*# sourceMappingURL=accueil.css.map */
