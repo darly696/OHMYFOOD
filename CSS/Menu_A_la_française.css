@@ -1,0 +1,82 @@
+body.Menu-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  padding: 14px 17px;
+}
+header h2 {
+  text-align: center;
+}
+header img {
+  width: 50%;
+}
+
+main img {
+  width: 100%;
+}
+main .background-section {
+  background-color: #f6f6f6;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+main .background-section h1.title {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: Shrikhand;
+}
+main .background-section i.fa-regular.fa-heart {
+  color: #101010;
+}
+main section h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main ul {
+  list-style: none;
+}
+main ul h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+main ul p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #353535;
+}
+main ul p span.Price {
+  font-weight: 700;
+  margin-left: 20px;
+}
+main .button {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background: linear-gradient(#9356dc, #ff79da);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 180px;
+  margin-left: 30px;
+}
+main .button:hover {
+  background: linear-gradient(#782cd3, #ff46cc);
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+/*# sourceMappingURL=Menu_A_la_fran%C3%A7aise.css.map */

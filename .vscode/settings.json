@@ -1,14 +1,12 @@
-{
-    "json.schemas": [
-
-    ],
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": null,
-            "savePathReplacementPairs": null
-        }
-    ]
-    
-}
+"liveSassCompile.settings.formats": [
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "../assets/css/"
+    }
+],
+"liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**"
+],
+"liveSassCompile.settings.sassCommand": "sass"
