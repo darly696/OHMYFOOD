@@ -2,11 +2,15 @@
     {
         "format": "expanded",
         "extensionName": ".css",
-        "savePath": "../assets/css/"
+        "savePath": "./assets/css",
+        "sourcemap": true
     }
 ],
 "liveSassCompile.settings.excludeList": [
     "**/node_modules/**",
     ".vscode/**"
 ],
-"liveSassCompile.settings.sassCommand": "sass"
+"liveSassCompile.settings.sassCommand": "dart-sass",
+"LiveSassCompile.settings.includeItems": [
+    "ohmyfood"
+]

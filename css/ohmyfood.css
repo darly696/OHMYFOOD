@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/*POlices*/
+/*Couleurs*/
+/*header*/
+/*footer*/
+/*bouton-cta*/
+.button {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(#9356dc, #ff79da);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+}
+
+.button:hover {
+  background: linear-gradient(#782cd3, #ff46cc);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  flex-direction: column;
+}
+header img {
+  width: 50%;
+}
+header .location {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+header .location i.fa-solid.fa-location-dot {
+  width: 12px;
+  height: 16px;
+  color: #353535;
+}
+header .location input {
+  border: none;
+  color: #353535;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #eaeaea;
+  align-self: center;
+  margin-left: 17px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+.footer ul {
+  list-style: none;
+}
+
+.menu-page {
+  background-color: #f6f6f6;
+}
+
+@media screen and (max-width: 767px) {
+  .présentation {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+  }
+  .présentation h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .présentation p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #353535;
+    text-align: center;
+  }
+  .fonctionnement {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .fonctionnement h2 {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .fonctionnement ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .fonctionnement li {
+    display: flex;
+    height: 73px;
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+  }
+  .fonctionnement li::before {
+    content: counter(item);
+    counter-increment: item;
+    display: block;
+    position: absolute;
+    left: -1px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    background-color: #9356dc;
+  }
+  .fonctionnement li i {
+    margin-right: 10px;
+    margin-left: 25px;
+    color: #7e7e7e;
+  }
+  .fonctionnement li span {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Restaurants {
+    display: flex;
+    flex-direction: column;
+  }
+  .Restaurants h2 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .Restaurants ul {
+    list-style: none;
+    padding: 0;
+  }
+  .Restaurants li {
+    margin-bottom: 20px;
+  }
+  .Restaurants li a.like-button {
+    display: block;
+    text-decoration: none;
+  }
+  .Restaurants li figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+  }
+  .Restaurants li figure img {
+    width: 100%;
+    height: 231px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .Restaurants li figure .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 29px;
+    border-radius: 5px;
+    background-color: #99e2d0;
+    color: #008766;
+  }
+  .Restaurants li figure figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .Restaurants li figure figcaption i {
+    margin-bottom: 5px;
+  }
+  .Restaurants li figure figcaption h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+body {
+  margin: 0;
+}
+
+/*# sourceMappingURL=ohmyfood.css.map */
