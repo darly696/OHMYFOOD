@@ -1,0 +1,35 @@
+/*POlices*/
+/*Couleurs*/
+/*header*/
+/*footer*/
+/*bouton-cta*/
+.button {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(#9356dc, #ff79da);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  align-self: center;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(#782cd3, #ff46cc);
+}
+
+.heart-button i {
+  transition: color 0.3s ease;
+}
+.heart-button:hover i {
+  color: #9356dc, #ff79da;
+}
+
+/*# sourceMappingURL=styles-communs.css.map */
