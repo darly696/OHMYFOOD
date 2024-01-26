@@ -1,20 +1,24 @@
 .menu-page {
     background-color: #f6f6f6;
 }
+
 .header {
     display: flex;
     align-items: center;
 
-    i.fa-solid.fa-arrow-left {
-        margin-left: 17px;
+    img {
+        width: 50%;
+        height: auto;
+    }
+    i {
+        margin-left: auto;
+        cursor: pointer;
     }
 }
+
 .main {
     img {
         width: 375px;
         height: 275px;
     }
-}
-.footer {
-    background-color: #000;
 }

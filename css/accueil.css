@@ -120,11 +120,13 @@
     flex-direction: column;
     margin-top: 10px;
     font-family: Roboto;
-    align-self: flex-start;
     color: #000;
+    margin-left: auto;
   }
   .Restaurants li figure figcaption i {
     margin-bottom: 5px;
+    margin-left: 170px;
+    margin-right: 20px;
   }
   .Restaurants li figure figcaption h3 {
     margin: 0;

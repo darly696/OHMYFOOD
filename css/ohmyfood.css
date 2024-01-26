@@ -85,17 +85,18 @@ header .location input {
   display: flex;
   align-items: center;
 }
-.header i.fa-solid.fa-arrow-left {
-  margin-left: 17px;
+.header img {
+  width: 50%;
+  height: auto;
+}
+.header i {
+  margin-left: auto;
+  cursor: pointer;
 }
 
 .main img {
   width: 375px;
   height: 275px;
-}
-
-.footer {
-  background-color: #000;
 }
 
 @media screen and (max-width: 767px) {
@@ -219,11 +220,13 @@ header .location input {
     flex-direction: column;
     margin-top: 10px;
     font-family: Roboto;
-    align-self: flex-start;
     color: #000;
+    margin-left: auto;
   }
   .Restaurants li figure figcaption i {
     margin-bottom: 5px;
+    margin-left: 170px;
+    margin-right: 20px;
   }
   .Restaurants li figure figcaption h3 {
     margin: 0;
