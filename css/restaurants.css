@@ -1,0 +1,19 @@
+/*police*/
+/*couleurs*/
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 42px;
+    padding: 14px 89px 17px 13px;
+  }
+  .header img {
+    width: 80%;
+  }
+}
+.main img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=restaurants.css.map */

@@ -1,0 +1,17 @@
+@import "_styles-communs";
+.footer {
+    background-color: #000;
+    color: #fff;
+
+    ul {
+        list-style: none;
+    }
+    li {
+        margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}

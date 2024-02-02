@@ -1,9 +1,19 @@
-@import "_styles-communs";
-@import "_header";
-@import "_footer";
-@import "_menu";
-@import "_accueil";
+/*import fichiers individuels*/
+@import "styles/header";
+@import "styles/accueil";
+@import "styles/animations";
+@import "styles/button";
+@import "styles/footer";
 
-body {
-    margin: 0;
+/*media-queries */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        margin: 0px;
+    }
 }
