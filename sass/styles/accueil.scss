@@ -1,8 +1,13 @@
-@media screen and (max-width: 767px) {
+@import "_styles-communs";
+
+.accueil {
     .présentation {
         background-color: #f6f6f6;
         display: flex;
         flex-direction: column;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
 
         h1 {
             font-size: 24px;
@@ -26,6 +31,7 @@
             margin-left: 10px;
             margin-top: 20px;
             font-family: Roboto;
+            font-size: 1.8rem;
         }
 
         ol {
@@ -57,7 +63,9 @@
                 line-height: 30px;
                 margin-right: 10px;
                 background-color: #9356dc;
+                color: #fff;
             }
+
             i {
                 margin-right: 10px;
                 margin-left: 25px;
@@ -75,11 +83,14 @@
         display: flex;
         flex-direction: column;
         background: #f6f6f6;
+        margin-top: 68px;
+
         h2 {
-            margin-left: 15px;
+            margin-left: 1.5rem;
             font-size: 24px;
             font-weight: 700;
             font-family: Roboto;
+            margin-top: 50px;
         }
 
         ul {
@@ -93,6 +104,7 @@
                 display: block;
                 text-decoration: none;
             }
+
             figure {
                 display: flex;
                 align-items: center;
@@ -106,16 +118,16 @@
                 img {
                     width: 100%;
                     height: 231px;
-                    border-top-right-radius: 15px;
-                    border-top-left-radius: 15px;
+                    border-top-right-radius: 1.5rem;
+                    border-top-left-radius: 1.5rem;
                 }
 
                 .badge {
                     position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    width: 80px;
-                    height: 29px;
+                    top: 1rem;
+                    left: 1rem;
+                    width: 8rem;
+                    height: 2.9rem;
                     border-radius: 5px;
                     background-color: #99e2d0;
                     color: #008766;
@@ -125,15 +137,20 @@
                     flex-direction: column;
                     margin-top: 10px;
                     font-family: Roboto;
-                    align-self: flex-start;
                     color: #000;
+                    margin-left: auto;
+
                     i {
-                        margin-bottom: 5px;
+                        margin-right: 20px;
+                        margin-left: 20px;
                     }
                     h3 {
                         margin: 0;
-                        font-size: 18px;
+                        font-size: 1.8rem;
                         font-weight: 700;
+                    }
+                    p {
+                        margin-top: 0px;
                     }
                 }
             }
