@@ -9,21 +9,21 @@
   flex-direction: column;
 }
 .header img {
-  width: 70%;
-  padding: 1.4rem 8.9rem 1.3rem 8.9rem;
+  width: 197px;
+  padding: 14px 89px 13px 89px;
 }
 .header .location {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 3.25rem;
+  height: 50px;
   background-color: #eaeaea;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .header .location i.fa-solid.fa-location-dot {
-  width: 1.2rem;
-  height: 1.6rem;
+  width: 12px;
+  height: 16px;
   color: #353535;
   margin-left: 100px;
 }
@@ -31,9 +31,8 @@
   border: none;
   color: #353535;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 16px;
   background-color: #eaeaea;
-  align-self: center;
   margin-left: 17px;
 }
 
@@ -43,7 +42,6 @@
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  height: 300px;
   justify-content: center;
   align-items: center;
 }
@@ -59,16 +57,17 @@
   color: #353535;
   text-align: center;
   font-family: Roboto;
+  margin-top: 0px;
 }
 .accueil .fonctionnement {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .accueil .fonctionnement h2 {
   margin-left: 10px;
-  margin-top: 20px;
   font-family: Roboto;
   font-size: 1.8rem;
+  margin-bottom: 40px;
 }
 .accueil .fonctionnement ol {
   list-style: none;
@@ -101,41 +100,45 @@
   background-color: #9356dc;
   color: #fff;
 }
+.accueil .fonctionnement li:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
 .accueil .fonctionnement li i {
   margin-right: 10px;
-  margin-left: 25px;
+  margin-left: 35px;
   color: #7e7e7e;
+  transition: color 0.3s ease;
+}
+.accueil .fonctionnement li i:hover {
+  color: #9356dc;
 }
 .accueil .fonctionnement li span {
   margin-left: 10px;
   font-size: 18px;
   font-weight: 700;
 }
-.accueil .Restaurants {
+
+.Restaurants {
   display: flex;
   flex-direction: column;
   background: #f6f6f6;
-  margin-top: 68px;
 }
-.accueil .Restaurants h2 {
-  margin-left: 1.5rem;
-  font-size: 24px;
-  font-weight: 700;
+.Restaurants h2 {
+  margin-left: 20px;
   font-family: Roboto;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
-.accueil .Restaurants ul {
+.Restaurants ul {
   list-style: none;
   padding: 0;
 }
-.accueil .Restaurants li {
-  margin-bottom: 20px;
+.Restaurants li {
+  position: relative;
+  margin-bottom: 40px;
 }
-.accueil .Restaurants li a.like-button {
-  display: block;
-  text-decoration: none;
-}
-.accueil .Restaurants li figure {
+.Restaurants li figure {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -144,44 +147,83 @@
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 1s ease;
 }
-.accueil .Restaurants li figure img {
+.Restaurants li figure:hover {
+  box-shadow: 0px 4px 20px 5px #9356dc;
+  transform: scale(1.1);
+}
+.Restaurants li figure img {
   width: 100%;
   height: 231px;
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
+  transition: transform 1s ease;
 }
-.accueil .Restaurants li figure .badge {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 8rem;
-  height: 2.9rem;
-  border-radius: 5px;
-  background-color: #99e2d0;
-  color: #008766;
-}
-.accueil .Restaurants li figure figcaption {
+.Restaurants li figcaption {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
   font-family: Roboto;
   color: #000;
   margin-left: auto;
 }
-.accueil .Restaurants li figure figcaption i {
-  margin-right: 20px;
-  margin-left: 20px;
+.Restaurants li figcaption i {
+  position: absolute;
 }
-.accueil .Restaurants li figure figcaption h3 {
+.Restaurants li figcaption .heart-full {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 2s;
+}
+.Restaurants li figcaption .heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.Restaurants li figcaption .restaurant-title {
   margin: 0;
-  font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 50px;
 }
-.accueil .Restaurants li figure figcaption p {
-  margin-top: 0px;
+.Restaurants li figcaption .heart-icon {
+  margin-left: 100px;
+  margin-bottom: 65px;
+  margin-right: -60px;
+}
+.Restaurants li figcaption .restaurant-location {
+  margin-top: 20px;
+}
+.Restaurants li .badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #99e2d0;
+  color: #008766;
+  z-index: 1;
 }
 
+/* Média query sup à 768px */
+@media screen and (min-width: 769px) {
+  .présentation .h1-container {
+    white-space: nowrap;
+  }
+  .fonctionnement ol {
+    display: flex;
+    gap: 20px;
+  }
+  .restaurants ul {
+    flex-direction: row;
+  }
+  .restaurants li {
+    width: 48%;
+  }
+}
 /*police*/
 /*couleurs*/
 @keyframes fadeIn {
@@ -213,7 +255,7 @@
 .button {
   padding: 15px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   background: linear-gradient(#9356dc, #ff79da);
   color: #fff;
   font-size: 16px;
@@ -223,54 +265,43 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
-  width: 180px;
   align-self: center;
-  transition: background 0.3s ease;
+  transition: background 0.8s ease;
 }
 .button:hover {
-  background: linear-gradient(#782cd3, #ff46cc);
+  opacity: 0.8;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
-.heart-button i {
-  transition: color 0.3s ease;
-}
-.heart-button:hover {
-  background: linear-gradient(90deg, #ff79da, #9356dc);
-  animation: fillheart 0.8s ease-in-out forwards;
-}
-
-@keyframes fillHeart {
-  to {
-    background-position: 0% 100%;
-  }
-}
 /*police*/
 /*couleurs*/
 .footer {
   background-color: #000;
   color: #fff;
 }
+.footer h3 {
+  margin-left: 40px;
+  padding-top: 20px;
+}
 .footer ul {
   list-style: none;
 }
 .footer li {
-  margin-bottom: 10px;
+  margin-bottom: -20px;
 }
 .footer li a {
   text-decoration: none;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
-
-/*media-queries */
-@media screen and (max-width: 768px) {
-  body {
-    margin: 0px;
-  }
+.footer li i {
+  margin-right: 10px;
 }
-@media screen and (min-width: 769px) {
-  body {
-    margin: 0px;
-  }
+.footer li .information:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 /*# sourceMappingURL=ohmyfood.css.map */

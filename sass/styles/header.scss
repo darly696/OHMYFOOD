@@ -7,21 +7,21 @@
     flex-direction: column;
 
     img {
-        width: 70%;
-        padding: 1.4rem 8.9rem 1.3rem 8.9rem;
+        width: 197px;
+        padding: 14px 89px 13px 89px;
     }
     .location {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 3.25rem;
+        height: 50px;
         background-color: #eaeaea;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
         i.fa-solid.fa-location-dot {
-            width: 1.2rem;
-            height: 1.6rem;
+            width: 12px;
+            height: 16px;
             color: #353535;
             margin-left: 100px;
         }
@@ -29,10 +29,12 @@
             border: none;
             color: #353535;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 16px;
             background-color: #eaeaea;
-            align-self: center;
             margin-left: 17px;
         }
     }
+}
+
+@media screen and (min-width: 769px) {
 }

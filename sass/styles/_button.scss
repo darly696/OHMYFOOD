@@ -1,9 +1,12 @@
 @import "_styles-communs";
 
+$animation-duration: 0.5s;
+$animation-delay: 0.1s;
+
 .button {
     padding: 15px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background: linear-gradient($primary, $secondary);
     color: #fff;
     font-size: 16px;
@@ -13,26 +16,12 @@
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    width: 180px;
     align-self: center;
-    transition: background 0.3s ease;
+    transition: background 0.8s ease;
 
     &:hover {
-        background: linear-gradient(darken($primary, 10%), darken($secondary, 10%));
-    }
-}
-
-.heart-button {
-    i {
-        transition: color 0.3s ease;
-    }
-    &:hover {
-        background: linear-gradient(90deg, #ff79da, #9356dc);
-        animation: fillheart 0.8s ease-in-out forwards;
-    }
-}
-@keyframes fillHeart {
-    to {
-        background-position: 0% 100%;
+        opacity: 0.8;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
     }
 }
