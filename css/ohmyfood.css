@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*import fichiers individuels*/
+body {
+  margin: 0;
+}
+
 /*police*/
 /*couleurs*/
 .header {
@@ -36,6 +40,10 @@
   margin-left: 17px;
 }
 
+body {
+  margin: 0;
+}
+
 /*police*/
 /*couleurs*/
 .accueil .présentation {
@@ -60,11 +68,10 @@
   margin-top: 0px;
 }
 .accueil .fonctionnement {
-  margin-top: 20px;
   margin-bottom: 50px;
 }
 .accueil .fonctionnement h2 {
-  margin-left: 10px;
+  margin-left: 20px;
   font-family: Roboto;
   font-size: 1.8rem;
   margin-bottom: 40px;
@@ -136,7 +143,7 @@
 }
 .Restaurants li {
   position: relative;
-  margin-bottom: 40px;
+  margin: 8px;
 }
 .Restaurants li figure {
   display: flex;
@@ -145,13 +152,14 @@
   position: relative;
   margin: 0;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 25px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 1s ease;
+  transition: box-shadow 0.6s ease, opaity 0.6s ease;
 }
 .Restaurants li figure:hover {
-  box-shadow: 0px 4px 20px 5px #9356dc;
-  transform: scale(1.1);
+  box-shadow: 0px 4px 10px 5px #9356dc;
+  transform: scale(1);
+  opacity: 0.8;
 }
 .Restaurants li figure img {
   width: 100%;
@@ -164,10 +172,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  width: 100%;
   font-family: Roboto;
   color: #000;
-  margin-left: auto;
+  font-size: 18px;
 }
 .Restaurants li figcaption i {
   position: absolute;
@@ -184,15 +192,19 @@
   background-clip: text;
   -webkit-background-clip: text;
 }
+.Restaurants li figcaption .info-resto {
+  margin-left: 20px;
+}
 .Restaurants li figcaption .restaurant-title {
   margin: 0;
   font-weight: 700;
-  margin-bottom: 50px;
+  height: 10px;
 }
 .Restaurants li figcaption .heart-icon {
-  margin-left: 100px;
-  margin-bottom: 65px;
-  margin-right: -60px;
+  width: 32px;
+  height: 32px;
+  font-size: 30px;
+  margin-right: 20px;
 }
 .Restaurants li figcaption .restaurant-location {
   margin-top: 20px;
@@ -210,6 +222,9 @@
 
 /* Média query sup à 768px */
 @media screen and (min-width: 769px) {
+  body {
+    margin: 0 20px;
+  }
   .présentation .h1-container {
     white-space: nowrap;
   }
@@ -217,13 +232,25 @@
     display: flex;
     gap: 20px;
   }
-  .restaurants ul {
-    flex-direction: row;
+  .Restaurants ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
   }
-  .restaurants li {
-    width: 48%;
+  .Restaurants li {
+    width: calc(100% - 10px);
+  }
+  .Restaurants li figure {
+    width: 100%;
+  }
+  .Restaurants .restaurant-location {
+    color: #000;
   }
 }
+body {
+  margin: 0;
+}
+
 /*police*/
 /*couleurs*/
 @keyframes fadeIn {
@@ -250,6 +277,10 @@
     transform: translateY(0);
   }
 }
+body {
+  margin: 0;
+}
+
 /*police*/
 /*couleurs*/
 .button {
@@ -274,34 +305,82 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
+body {
+  margin: 0;
+}
+
 /*police*/
 /*couleurs*/
-.footer {
-  background-color: #000;
-  color: #fff;
+@media screen and (max-width: 768px) {
+  .footer {
+    background-color: #000;
+    color: #fff;
+  }
+  .footer h3 {
+    margin-left: 40px;
+    padding-top: 20px;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .footer li {
+    margin-bottom: -20px;
+  }
+  .footer li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .footer li i {
+    margin-right: 10px;
+  }
+  .footer li .information:hover {
+    text-decoration: underline;
+    color: white;
+  }
 }
-.footer h3 {
-  margin-left: 40px;
-  padding-top: 20px;
+@media screen and (min-width: 769px) {
+  .footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .footer h3 {
+    margin-left: 30px;
+  }
+  .footer ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer i,
+  p {
+    color: #fff;
+  }
+  .information:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
 }
-.footer ul {
-  list-style: none;
-}
-.footer li {
-  margin-bottom: -20px;
-}
-.footer li a {
-  text-decoration: none;
-  color: #fff;
-  display: flex;
-  align-items: center;
-}
-.footer li i {
-  margin-right: 10px;
-}
-.footer li .information:hover {
-  text-decoration: underline;
-  color: white;
+@media screen and (min-width: 1024px) {
+  .présentation .h1-container h1,
+  .présentation .p-container p {
+    display: block;
+  }
+  .footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 40px;
+  }
 }
 
 /*# sourceMappingURL=ohmyfood.css.map */

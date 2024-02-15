@@ -1,32 +1,82 @@
 @import "_styles-communs";
-.footer {
-    background-color: #000;
-    color: #fff;
-    h3 {
-        margin-left: 40px;
-        padding-top: 20px;
-    }
-
-    ul {
-        list-style: none;
-    }
-    li {
-        margin-bottom: -20px;
-
-        a {
-            text-decoration: none;
-            color: #fff;
-            display: flex;
-            align-items: center;
+@media screen and (max-width: 768px) {
+    .footer {
+        background-color: #000;
+        color: #fff;
+        h3 {
+            margin-left: 40px;
+            padding-top: 20px;
         }
-        i {
-            margin-right: 10px;
+
+        ul {
+            list-style: none;
         }
-        .information {
-            &:hover {
-                text-decoration: underline;
-                color: white;
+        li {
+            margin-bottom: -20px;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                align-items: center;
+            }
+            i {
+                margin-right: 10px;
+            }
+            .information {
+                &:hover {
+                    text-decoration: underline;
+                    color: white;
+                }
             }
         }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .footer {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        h3 {
+            margin-left: 30px;
+        }
+    }
+    .footer ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer i,
+    p {
+        color: #fff;
+    }
+    .information {
+        &:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .présentation {
+        .h1-container h1,
+        .p-container p {
+            display: block;
+        }
+    }
+    .footer {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 40px;
     }
 }
