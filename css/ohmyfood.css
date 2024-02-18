@@ -382,5 +382,104 @@ body {
     padding-right: 40px;
   }
 }
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-header img {
+  width: 50%;
+  padding: 14px;
+}
+
+.menu-main img {
+  width: 100%;
+}
+.menu-main .background-section {
+  background-color: #f6f6f6;
+  margin-top: -50px;
+  position: relative;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-main .menu-like {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.menu-main .heart-icon {
+  position: relative;
+}
+.menu-main .heart-empty {
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  font-size: 30px;
+}
+.menu-main .heart-full {
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 2s ease;
+  font-size: 30px;
+}
+.menu-main .heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79d0);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.menu-main ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-main li.plat-item {
+  background-color: #fff;
+  border-radius: 25px;
+  padding-left: 20px;
+}
+.menu-main h3 {
+  font-family: Roboto;
+}
+.menu-main .p {
+  font-size: 20px;
+}
+.menu-main .Price {
+  margin-left: 70px;
+  font-weight: bold;
+}
+.menu-main .menu-price {
+  display: flex;
+}
+.menu-main .menu-price .p {
+  font-family: Roboto;
+}
+
+.menu-footer {
+  background-color: #000;
+  color: #fff;
+}
+.menu-footer h3 {
+  margin-left: 40px;
+  padding-top: 20px;
+}
+.menu-footer ul {
+  list-style: none;
+}
+.menu-footer li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.menu-footer li i {
+  margin-right: 10px;
+}
+.menu-footer li .information:hover {
+  text-decoration: underline;
+  color: white;
+}
 
 /*# sourceMappingURL=ohmyfood.css.map */

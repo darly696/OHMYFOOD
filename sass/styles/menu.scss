@@ -1,0 +1,105 @@
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 50%;
+        padding: 14px;
+    }
+}
+.menu-main {
+    img {
+        width: 100%;
+    }
+    .background-section {
+        background-color: #f6f6f6;
+        margin-top: -50px;
+        position: relative;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-like {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+    .heart-icon {
+        position: relative;
+    }
+    .heart-empty {
+        position: absolute;
+        opacity: 1;
+        z-index: 1;
+        font-size: 30px;
+    }
+    .heart-full {
+        opacity: 0;
+        z-index: 0;
+        transition: opacity 2s ease;
+        font-size: 30px;
+    }
+    .heart-full:hover {
+        opacity: 1;
+        color: transparent;
+        background-image: linear-gradient(#9356dc, #ff79d0);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li.plat-item {
+        background-color: #fff;
+        border-radius: 25px;
+        padding-left: 20px;
+    }
+    h3 {
+        font-family: Roboto;
+    }
+    .p {
+        font-size: 20px;
+    }
+    .Price {
+        margin-left: 70px;
+        font-weight: bold;
+    }
+    .menu-price {
+        display: flex;
+    }
+    .menu-price .p {
+        font-family: Roboto;
+    }
+}
+.menu-footer {
+    background-color: #000;
+    color: #fff;
+    h3 {
+        margin-left: 40px;
+        padding-top: 20px;
+    }
+
+    ul {
+        list-style: none;
+    }
+    li {
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        i {
+            margin-right: 10px;
+        }
+        .information {
+            &:hover {
+                text-decoration: underline;
+                color: white;
+            }
+        }
+    }
+}
