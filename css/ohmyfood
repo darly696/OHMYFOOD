@@ -395,7 +395,7 @@ body {
   width: 100%;
 }
 .menu-main .background-section {
-  background-color: #f6f6f6;
+  background-color: rgba(255, 102, 255, 0.4);
   margin-top: -50px;
   position: relative;
   border-top-left-radius: 25px;
@@ -415,10 +415,8 @@ body {
 .menu-main .heart-icon {
   position: relative;
 }
-.menu-main i {
-  position: absolute;
-}
 .menu-main .heart-empty {
+  position: absolute;
   opacity: 1;
   z-index: 1;
   font-size: 25px;
@@ -426,154 +424,92 @@ body {
 }
 .menu-main .heart-full {
   opacity: 0;
-  z-index: 0;
   transition: opacity 0.3s ease;
   font-size: 25px;
 }
 .menu-main .heart-empty:focus + .heart-full {
   opacity: 1;
   color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
+  background-image: linear-gradient(#9356dc, #ff79d0);
 }
-.menu-main .Entrées h2,
-.menu-main .Plats h2,
-.menu-main .Désserts h2 {
+
+.Entrées h2,
+.Plats h2,
+.Desserts h2 {
   margin: 0;
   font-family: Roboto;
   font-weight: 300;
 }
-.menu-main .Entrées h2::after,
-.menu-main .Plats h2::after,
-.menu-main .Désserts h2::after {
-  content: "";
-  display: block;
-  width: 10%;
-  height: 2px;
-  background-color: #008766;
-  position: absolute;
-  bottom: 0;
-}
-.menu-main .Entrées ul,
-.menu-main .Plats ul,
-.menu-main .Désserts ul {
+.Entrées ul,
+.Plats ul,
+.Desserts ul {
   list-style: none;
   padding: 0;
 }
-.menu-main .Entrées .plat-item,
-.menu-main .Plats .plat-item,
-.menu-main .Désserts .plat-item {
+.Entrées .plat-item,
+.Plats .plat-item,
+.Desserts .plat-item {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 25px;
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
 }
-.menu-main .Entrées .plat-item input[type=checkbox],
-.menu-main .Plats .plat-item input[type=checkbox],
-.menu-main .Désserts .plat-item input[type=checkbox] {
+.Entrées .plat-item input[type=checkbox],
+.Plats .plat-item input[type=checkbox],
+.Desserts .plat-item input[type=checkbox] {
   display: none;
 }
-.menu-main .Entrées .plat-item label,
-.menu-main .Plats .plat-item label,
-.menu-main .Désserts .plat-item label {
+.Entrées .plat-item label,
+.Plats .plat-item label,
+.Desserts .plat-item label {
   display: block;
   position: relative;
   cursor: pointer;
 }
-.menu-main .Entrées .menu-details,
-.menu-main .Plats .menu-details,
-.menu-main .Désserts .menu-details {
+.Entrées .menu-details,
+.Plats .menu-details,
+.Desserts .menu-details {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-.menu-main .Entrées .menu-details h3,
-.menu-main .Entrées .menu-details p,
-.menu-main .Plats .menu-details h3,
-.menu-main .Plats .menu-details p,
-.menu-main .Désserts .menu-details h3,
-.menu-main .Désserts .menu-details p {
+.Entrées .menu-details h3,
+.Plats .menu-details h3,
+.Desserts .menu-details h3 {
   margin: 0;
-  padding-left: 10px;
-  display: flex;
-  justify-content: space-between;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
-.menu-main .menu-details b {
-  margin-left: 250px;
+.Entrées .menu-details p,
+.Plats .menu-details p,
+.Desserts .menu-details p {
+  margin: 0;
+}
+.Entrées .menu-details b,
+.Plats .menu-details b,
+.Desserts .menu-details b {
+  margin-left: auto;
   margin-top: -20px;
 }
-.menu-main .plat-item span {
+.Entrées .plat-item span,
+.Plats .plat-item span,
+.Desserts .plat-item span {
   position: absolute;
-  background-color: #008766;
+  background-color: #99ed20;
   color: #fff;
-  top: 0;
-  right: -20px;
-  width: 60px;
-  height: 40px;
-  border-radius: 0 15% 15% 0;
-  transition: left 0.5s linear;
+  top: 50%;
+  right: -1px;
+  transform: translateX(-50%);
+  transition: right 0.3s ease;
 }
-.menu-main .plat-item span i.fa-regular.fa-circle-check {
-  position: relative;
-  top: 30%;
-  left: 30%;
-}
-.menu-main #checkbox_1:checked + label span {
+.Entrées .plat-item input[type=checkbox]:checked + label span,
+.Plats .plat-item input[type=checkbox]:checked + label span,
+.Desserts .plat-item input[type=checkbox]:checked + label span {
   right: 0;
 }
-.menu-main #checkbox_1:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_2:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_2:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_3:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_3:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_4:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_4:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_5:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_5:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_6:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_6:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_7:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_7:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_8:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_8:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_9:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_9:checked + label span:not(:hover) {
-  right: -1px;
+.Entrées .plat-item input[type=checkbox]:checked + label span:not(:hover),
+.Plats .plat-item input[type=checkbox]:checked + label span:not(:hover),
+.Desserts .plat-item input[type=checkbox]:checked + label span:not(:hover) {
+  right: -15px;
 }
 
 .menu-footer {
@@ -597,7 +533,8 @@ body {
   margin-right: 10px;
 }
 .menu-footer li .information:hover {
+  text-decoration: underline;
   color: white;
 }
 
-/*# sourceMappingURL=ohmyfood.css.map */
+/*# sourceMappingURL=ohmyfood.map */

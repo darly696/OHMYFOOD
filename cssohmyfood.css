@@ -83,7 +83,7 @@ body {
   position: relative;
   background-color: #f6f6f6;
   border-radius: 20px;
-  margin-right: 20px;
+  margin-right: 10px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .accueil .fonctionnement li::before {
@@ -385,10 +385,7 @@ body {
 }
 .menu-header img {
   width: 50%;
-  padding: 14px 50px;
-}
-.menu-header i.fa-solid {
-  color: #000;
+  padding: 14px;
 }
 
 .menu-main img {
@@ -405,20 +402,14 @@ body {
 }
 .menu-main .menu-like {
   display: flex;
-  justify-content: space-around;
+  gap: 50px;
   align-items: center;
-}
-.menu-main .menu-like h1 {
-  font-size: 25px;
-  font-family: Shrikhand;
 }
 .menu-main .heart-icon {
   position: relative;
 }
-.menu-main i {
-  position: absolute;
-}
 .menu-main .heart-empty {
+  position: absolute;
   opacity: 1;
   z-index: 1;
   font-size: 25px;
@@ -426,154 +417,39 @@ body {
 }
 .menu-main .heart-full {
   opacity: 0;
-  z-index: 0;
   transition: opacity 0.3s ease;
   font-size: 25px;
 }
 .menu-main .heart-empty:focus + .heart-full {
   opacity: 1;
   color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
+  background-image: linear-gradient(#9356dc, #ff79d0);
 }
-.menu-main .Entrées h2,
-.menu-main .Plats h2,
-.menu-main .Désserts h2 {
-  margin: 0;
-  font-family: Roboto;
-  font-weight: 300;
-}
-.menu-main .Entrées h2::after,
-.menu-main .Plats h2::after,
-.menu-main .Désserts h2::after {
-  content: "";
-  display: block;
-  width: 10%;
-  height: 2px;
-  background-color: #008766;
-  position: absolute;
-  bottom: 0;
-}
-.menu-main .Entrées ul,
-.menu-main .Plats ul,
-.menu-main .Désserts ul {
+.menu-main ul {
   list-style: none;
   padding: 0;
 }
-.menu-main .Entrées .plat-item,
-.menu-main .Plats .plat-item,
-.menu-main .Désserts .plat-item {
+.menu-main li.plat-item {
   background-color: #fff;
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
+  border-radius: 25px;
+  padding-left: 20px;
 }
-.menu-main .Entrées .plat-item input[type=checkbox],
-.menu-main .Plats .plat-item input[type=checkbox],
-.menu-main .Désserts .plat-item input[type=checkbox] {
-  display: none;
+.menu-main h3 {
+  font-family: Roboto;
 }
-.menu-main .Entrées .plat-item label,
-.menu-main .Plats .plat-item label,
-.menu-main .Désserts .plat-item label {
-  display: block;
-  position: relative;
-  cursor: pointer;
+.menu-main .p {
+  font-size: 20px;
 }
-.menu-main .Entrées .menu-details,
-.menu-main .Plats .menu-details,
-.menu-main .Désserts .menu-details {
+.menu-main .Price {
+  margin-left: 70px;
+  font-weight: bold;
+}
+.menu-main .menu-price {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
 }
-.menu-main .Entrées .menu-details h3,
-.menu-main .Entrées .menu-details p,
-.menu-main .Plats .menu-details h3,
-.menu-main .Plats .menu-details p,
-.menu-main .Désserts .menu-details h3,
-.menu-main .Désserts .menu-details p {
-  margin: 0;
-  padding-left: 10px;
-  display: flex;
-  justify-content: space-between;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.menu-main .menu-details b {
-  margin-left: 250px;
-  margin-top: -20px;
-}
-.menu-main .plat-item span {
-  position: absolute;
-  background-color: #008766;
-  color: #fff;
-  top: 0;
-  right: -20px;
-  width: 60px;
-  height: 40px;
-  border-radius: 0 15% 15% 0;
-  transition: left 0.5s linear;
-}
-.menu-main .plat-item span i.fa-regular.fa-circle-check {
-  position: relative;
-  top: 30%;
-  left: 30%;
-}
-.menu-main #checkbox_1:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_1:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_2:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_2:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_3:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_3:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_4:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_4:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_5:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_5:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_6:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_6:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_7:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_7:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_8:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_8:checked + label span:not(:hover) {
-  right: -1px;
-}
-.menu-main #checkbox_9:checked + label span {
-  right: 0;
-}
-.menu-main #checkbox_9:checked + label span:not(:hover) {
-  right: -1px;
+.menu-main .menu-price .p {
+  font-family: Roboto;
 }
 
 .menu-footer {
@@ -597,7 +473,8 @@ body {
   margin-right: 10px;
 }
 .menu-footer li .information:hover {
+  text-decoration: underline;
   color: white;
 }
 
-/*# sourceMappingURL=ohmyfood.css.map */
+/*# sourceMappingURL=cssohmyfood.css.map */

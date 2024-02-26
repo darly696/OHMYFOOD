@@ -5,7 +5,10 @@
 
     img {
         width: 50%;
-        padding: 14px;
+        padding: 14px 50px;
+    }
+    i.fa-solid {
+        color: #000;
     }
 }
 .menu-main {
@@ -23,57 +26,174 @@
     }
     .menu-like {
         display: flex;
-        gap: 50px;
+        justify-content: space-around;
         align-items: center;
+        h1 {
+            font-size: 25px;
+            font-family: Shrikhand;
+        }
     }
+
     .heart-icon {
         position: relative;
     }
-    .heart-empty {
+    i {
         position: absolute;
+    }
+    .heart-empty {
         opacity: 1;
         z-index: 1;
-        font-size: 30px;
+        font-size: 25px;
+        cursor: pointer;
     }
     .heart-full {
         opacity: 0;
         z-index: 0;
-        transition: opacity 2s ease;
-        font-size: 30px;
+        transition: opacity 0.3s ease;
+        font-size: 25px;
     }
-    .heart-full:hover {
+    .heart-empty:focus + .heart-full {
         opacity: 1;
         color: transparent;
-        background-image: linear-gradient(#9356dc, #ff79d0);
-        background-clip: text;
-        -webkit-background-clip: text;
+        background-image: linear-gradient(#9356dc, #ff79da);
     }
-    ul {
-        list-style: none;
-        padding: 0;
+
+    .Entrées,
+    .Plats,
+    .Désserts {
+        h2 {
+            margin: 0;
+            font-family: Roboto;
+            font-weight: 300;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 10%;
+            height: 2px;
+            background-color: #008766;
+            position: absolute;
+            bottom: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .plat-item {
+            background-color: #fff;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .plat-item input[type="checkbox"] {
+            display: none;
+        }
+        .plat-item label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+        .menu-details {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .menu-details h3,
+        .menu-details p {
+            margin: 0;
+            padding-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
-    li.plat-item {
-        background-color: #fff;
-        border-radius: 25px;
-        padding-left: 20px;
+    .menu-details b {
+        margin-left: 250px;
+        margin-top: -20px;
     }
-    h3 {
-        font-family: Roboto;
+    .plat-item span {
+        position: absolute;
+        background-color: #008766;
+        color: #fff;
+        top: 0;
+        right: -20px;
+        width: 60px;
+        height: 40px;
+        border-radius: 0 15% 15% 0;
+        transition: left 0.5s linear;
+        i.fa-regular.fa-circle-check {
+            position: relative;
+            top: 30%;
+            left: 30%;
+        }
     }
-    .p {
-        font-size: 20px;
+
+    #checkbox_1:checked + label span {
+        right: 0;
     }
-    .Price {
-        margin-left: 70px;
-        font-weight: bold;
+    #checkbox_1:checked + label span:not(:hover) {
+        right: -1px;
     }
-    .menu-price {
-        display: flex;
+
+    #checkbox_2:checked + label span {
+        right: 0;
     }
-    .menu-price .p {
-        font-family: Roboto;
+    #checkbox_2:checked + label span:not(:hover) {
+        right: -1px;
+    }
+
+    #checkbox_3:checked + label span {
+        right: 0;
+    }
+    #checkbox_3:checked + label span:not(:hover) {
+        right: -1px;
+    }
+    #checkbox_4:checked + label span {
+        right: 0;
+    }
+    #checkbox_4:checked + label span:not(:hover) {
+        right: -1px;
+    }
+
+    #checkbox_5:checked + label span {
+        right: 0;
+    }
+    #checkbox_5:checked + label span:not(:hover) {
+        right: -1px;
+    }
+
+    #checkbox_6:checked + label span {
+        right: 0;
+    }
+    #checkbox_6:checked + label span:not(:hover) {
+        right: -1px;
+    }
+    #checkbox_7:checked + label span {
+        right: 0;
+    }
+    #checkbox_7:checked + label span:not(:hover) {
+        right: -1px;
+    }
+
+    #checkbox_8:checked + label span {
+        right: 0;
+    }
+    #checkbox_8:checked + label span:not(:hover) {
+        right: -1px;
+    }
+
+    #checkbox_9:checked + label span {
+        right: 0;
+    }
+    #checkbox_9:checked + label span:not(:hover) {
+        right: -1px;
     }
 }
+
 .menu-footer {
     background-color: #000;
     color: #fff;
@@ -97,7 +217,6 @@
         }
         .information {
             &:hover {
-                text-decoration: underline;
                 color: white;
             }
         }
