@@ -1,19 +1,62 @@
-.menu-header {
+.loader {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #9356dc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 0.5s ease 3s forwards;
+}
 
-    img {
-        width: 50%;
-        padding: 14px 50px;
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        color: #ff79da;
     }
-    i.fa-solid {
-        color: #000;
+    to {
+        opacity: 1;
+        color: #9356dc;
     }
 }
-.menu-main {
-    img {
-        width: 100%;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        color: #9356dc;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 50%;
+            padding: 14px 50px;
+        }
+        i.fa-solid {
+            color: #000;
+        }
+    }
+    .menu-main {
+        img {
+            width: 100%;
+        }
     }
     .background-section {
         background-color: #f6f6f6;
@@ -21,13 +64,12 @@
         position: relative;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        display: flex;
-        flex-direction: column;
     }
+
     .menu-like {
         display: flex;
         justify-content: space-around;
-        align-items: center;
+
         h1 {
             font-size: 25px;
             font-family: Shrikhand;
@@ -36,23 +78,25 @@
 
     .heart-icon {
         position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
     }
-    i {
-        position: absolute;
-    }
+
     .heart-empty {
         opacity: 1;
         z-index: 1;
         font-size: 25px;
-        cursor: pointer;
     }
+
     .heart-full {
         opacity: 0;
         z-index: 0;
         transition: opacity 0.3s ease;
         font-size: 25px;
+        position: absolute;
     }
-    .heart-empty:focus + .heart-full {
+    .heart-empty:hover + .heart-full {
         opacity: 1;
         color: transparent;
         background-image: linear-gradient(#9356dc, #ff79da);
@@ -62,163 +106,146 @@
     .Plats,
     .Désserts {
         h2 {
-            margin: 0;
-            font-family: Roboto;
             font-weight: 300;
+            margin-left: 10px;
         }
 
         h2::after {
             content: "";
             display: block;
-            width: 10%;
+            width: 15%;
             height: 2px;
-            background-color: #008766;
-            position: absolute;
-            bottom: 0;
+            background-color: #99e2d0;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        .plat-item {
-            background-color: #fff;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        .plat-item input[type="checkbox"] {
-            display: none;
-        }
-        .plat-item label {
-            display: block;
-            position: relative;
-            cursor: pointer;
-        }
-        .menu-details {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-        }
-        .menu-details h3,
-        .menu-details p {
-            margin: 0;
-            padding-left: 10px;
-            display: flex;
-            justify-content: space-between;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    }
-    .menu-details b {
-        margin-left: 250px;
-        margin-top: -20px;
-    }
-    .plat-item span {
-        position: absolute;
-        background-color: #008766;
-        color: #fff;
-        top: 0;
-        right: -20px;
-        width: 60px;
-        height: 40px;
-        border-radius: 0 15% 15% 0;
-        transition: left 0.5s linear;
-        i.fa-regular.fa-circle-check {
-            position: relative;
-            top: 30%;
-            left: 30%;
-        }
-    }
-
-    #checkbox_1:checked + label span {
-        right: 0;
-    }
-    #checkbox_1:checked + label span:not(:hover) {
-        right: -1px;
-    }
-
-    #checkbox_2:checked + label span {
-        right: 0;
-    }
-    #checkbox_2:checked + label span:not(:hover) {
-        right: -1px;
-    }
-
-    #checkbox_3:checked + label span {
-        right: 0;
-    }
-    #checkbox_3:checked + label span:not(:hover) {
-        right: -1px;
-    }
-    #checkbox_4:checked + label span {
-        right: 0;
-    }
-    #checkbox_4:checked + label span:not(:hover) {
-        right: -1px;
-    }
-
-    #checkbox_5:checked + label span {
-        right: 0;
-    }
-    #checkbox_5:checked + label span:not(:hover) {
-        right: -1px;
-    }
-
-    #checkbox_6:checked + label span {
-        right: 0;
-    }
-    #checkbox_6:checked + label span:not(:hover) {
-        right: -1px;
-    }
-    #checkbox_7:checked + label span {
-        right: 0;
-    }
-    #checkbox_7:checked + label span:not(:hover) {
-        right: -1px;
-    }
-
-    #checkbox_8:checked + label span {
-        right: 0;
-    }
-    #checkbox_8:checked + label span:not(:hover) {
-        right: -1px;
-    }
-
-    #checkbox_9:checked + label span {
-        right: 0;
-    }
-    #checkbox_9:checked + label span:not(:hover) {
-        right: -1px;
-    }
-}
-
-.menu-footer {
-    background-color: #000;
-    color: #fff;
-    h3 {
-        margin-left: 40px;
-        padding-top: 20px;
     }
 
     ul {
         list-style: none;
+        padding: 0;
     }
-    li {
-        a {
-            text-decoration: none;
-            color: #fff;
+    .plat-item {
+        background-color: #fff;
+        border-radius: 15px;
+        margin: 10px;
+        position: relative;
+        transition: transform 0.3s ease;
+        opacity: 0;
+    }
+    .plat-item:nth-child(1) {
+        animation: appearAnimation $animation-duration ease-in-out 0.1s forwards;
+    }
+    .plat-item:nth-child(2) {
+        animation: appearAnimation $animation-duration ease-in-out 0.2s forwards;
+    }
+    .plat-item:nth-child(3) {
+        animation: appearAnimation $animation-duration ease-in-out 0.3s forwards;
+    }
+    .menu-details {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        h3 {
+            margin: 0;
+            padding: 10px 0;
+        }
+    }
+
+    .menu-price-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-info p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .plat-item span {
+        background-color: #99e2d0;
+        color: #fff;
+        width: 60px;
+        height: 100%;
+        top: 0;
+        border-radius: 0 15% 15% 0;
+        display: flex;
+        position: absolute;
+        right: -60px;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.6s ease;
+        opacity: 0;
+    }
+
+    .plat-item:hover span {
+        right: 0;
+        opacity: 1;
+    }
+    .plat-item:hover .menu-info p {
+        max-width: calc(100% - 90px);
+    }
+    .plat-item:hover {
+        transform: scale(1);
+    }
+
+    .menu-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-footer {
+        background-color: #353535;
+        color: #fff;
+        h3 {
+            margin-left: 40px;
+            padding-top: 20px;
+            font-family: Shrikhand;
+            font-size: 25px;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 40px;
+        }
+        li {
+            padding-bottom: 10px;
+            a {
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                font-size: 25px;
+            }
+            i {
+                margin-right: 15px;
+            }
+            p.information {
+                margin: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 769px) {
+    .menu-header {
+        display: flex;
+        justify-content: center;
+    }
+    .menu-main {
+        img {
+            width: 100%;
+        }
+        .background-section {
+            background-color: #f6f6;
+            margin-top: -50px;
+            position: relative;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        .menu-like {
             display: flex;
             align-items: center;
-        }
-        i {
-            margin-right: 10px;
-        }
-        .information {
-            &:hover {
-                color: white;
-            }
+            justify-content: center;
         }
     }
 }

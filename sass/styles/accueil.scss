@@ -136,57 +136,58 @@
             width: 100%;
             font-family: Roboto;
             color: #000;
-
-            .heart-icon {
-                width: 32px;
-                height: 32px;
-                font-size: 20px;
-            }
-
-            i {
-                position: absolute;
-            }
-            .heart-empty {
-                opacity: 1;
-                z-index: 1;
-                font-size: 30px;
-                cursor: pointer;
-            }
-
-            .heart-full {
-                opacity: 0;
-                z-index: 0;
-                transition: opacity 0.3s ease;
-                font-size: 30px;
-            }
-            .heart-empty:focus + .heart-full {
-                opacity: 1;
-                color: transparent;
-                background-image: linear-gradient(#9356dc, #ff79da);
-            }
-            .info-resto {
-                padding: 8px;
-            }
-            .restaurant-title {
-                margin: 0px;
-            }
-
-            .restaurant-location {
-                margin-top: 2px;
-            }
         }
-        .badge {
+        .heart-icon {
+            width: 32px;
+            height: 32px;
+            font-size: 20px;
+            padding-right: 20px;
+        }
+
+        i {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #99e2d0;
-            color: #008766;
+        }
+        .heart-empty {
+            opacity: 1;
             z-index: 1;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .heart-full {
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+            font-size: 32px;
+        }
+        .heart-empty:hover + .heart-full {
+            opacity: 1;
+            color: transparent;
+            background-image: linear-gradient(#9356dc, #ff79da);
+        }
+        .info-resto {
+            padding: 8px;
+        }
+        .restaurant-title {
+            margin: 0px;
+        }
+
+        .restaurant-location {
+            margin-top: 2px;
         }
     }
 }
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #99e2d0;
+    color: #008766;
+    z-index: 1;
+}
+
 /* Média query sup à 768px */
 @media screen and (min-width: 769px) {
     body {
@@ -218,10 +219,10 @@
             figure {
                 width: 100%;
             }
-        }
 
-        .restaurant-location {
-            color: #000;
+            .restaurant-location {
+                color: #000;
+            }
         }
     }
 }
