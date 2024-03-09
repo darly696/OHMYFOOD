@@ -1,81 +1,68 @@
 @import "_styles-communs";
-@media screen and (max-width: 768px) {
-    .footer {
-        background-color: #353535;
-        color: #fff;
-        h3 {
-            margin-left: 40px;
-            padding-top: 20px;
-            font-family: Shrikhand;
-            font-size: 25px;
-        }
 
-        ul {
-            list-style: none;
-            margin-left: 40px;
-        }
+.menu-footer {
+    background-color: #353535;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        padding: 22px 25px 22px 25px;
+        font-family: Shrikhand;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
         li {
-            padding-bottom: 10px;
+            padding: 10px 22px;
+            display: flex;
+            align-items: center;
+
             a {
                 text-decoration: none;
                 color: #fff;
                 display: flex;
                 align-items: center;
-                font-size: 25px;
-            }
-            i {
-                margin-right: 15px;
-            }
-            p.information {
-                margin: 0;
+
+                i {
+                    margin-right: 10px;
+                }
+                p.information {
+                    margin: 0;
+                }
             }
         }
     }
 }
-
 @media screen and (min-width: 769px) {
-    .footer {
-        background-color: #353535;
-        color: #fff;
+    .menu-footer {
         display: flex;
+        flex-direction: row;
         align-items: center;
         h3 {
-            margin-left: 30px;
-            font-family: Shrikhand;
+            font-size: 20px;
+            padding: 22px 2px 22px 25px;
         }
-    }
-    .footer ul {
-        display: flex;
-        gap: 10px;
-        list-style: none;
-    }
-    a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-    }
-    .footer i,
-    p {
-        color: #fff;
-    }
-    p.information {
-        font-size: 18px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        p.information {
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .présentation {
-        .h1-container h1,
-        .p-container p {
-            display: block;
-        }
-    }
-    .footer {
-        background-color: #353535;
-        color: #fff;
-        display: flex;
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .menu-footer {
         flex-direction: row-reverse;
-        padding-right: 40px;
     }
 }

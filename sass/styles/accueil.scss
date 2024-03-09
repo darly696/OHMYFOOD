@@ -3,6 +3,7 @@
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
+    background-color: #99e2d0;
     color: #9356dc;
     position: fixed;
     top: 0;
@@ -19,7 +20,7 @@
 .letter {
     display: inline-block;
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
+    animation: fadeIn 0.5s ease forwards var(--delay);
 }
 @keyframes fadeIn {
     from {
@@ -35,9 +36,11 @@
     from {
         opacity: 1;
         color: #9356dc;
+        height: 100%;
     }
     to {
         opacity: 0;
+        height: 0;
     }
 }
 .accueil {
@@ -81,7 +84,6 @@
             position: relative;
             background-color: #f6f6f6;
             border-radius: 20px;
-            margin-right: 20px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
             &::before {
@@ -89,14 +91,12 @@
                 counter-increment: item;
                 display: block;
                 position: absolute;
-                left: -1px;
                 transform: translateX(-50%);
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
                 text-align: center;
                 line-height: 30px;
-                margin-right: 10px;
                 background-color: #9356dc;
                 color: #fff;
             }
@@ -107,8 +107,7 @@
             }
 
             i {
-                margin-right: 10px;
-                margin-left: 35px;
+                margin-left: 40px;
                 color: #7e7e7e;
                 transition: color 0.3s ease;
 
@@ -117,8 +116,9 @@
                 }
             }
             span {
-                margin-left: 10px;
+                margin-left: 90px;
                 font-weight: 700;
+                display: flex;
             }
         }
     }
@@ -150,6 +150,8 @@
             position: relative;
             background-color: #fff;
             border-radius: 25px;
+            width: 100%;
+            margin: 8px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
             transition:
                 box-shadow 0.6s ease,
@@ -192,6 +194,7 @@
             z-index: 1;
             font-size: 32px;
             cursor: pointer;
+            transition: opacity ease-in-out 0.2;
         }
 
         .heart-full {
@@ -200,10 +203,15 @@
             transition: opacity 0.3s ease;
             font-size: 32px;
         }
+        .heart-empty:hover {
+            opacity: 0;
+        }
         .heart-empty:hover + .heart-full {
             opacity: 1;
             color: transparent;
             background-image: linear-gradient(#9356dc, #ff79da);
+            background-clip: text;
+            -webkit-background-clip: text;
         }
         .info-resto {
             padding: 8px;
@@ -241,7 +249,7 @@
 
     .fonctionnement ol {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .li {
             flex: 1;

@@ -1,5 +1,7 @@
 body {
-    margin: 0;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
 }
 /*police*/
 $logo-font: "Shrikhand", sans-serif;
