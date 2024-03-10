@@ -127,7 +127,7 @@ body {
 .accueil .fonctionnement li {
   display: flex;
   height: 73px;
-  margin: 10px;
+  margin-bottom: 20px;
   align-items: center;
   position: relative;
   background-color: #f6f6f6;
@@ -161,7 +161,7 @@ body {
   color: #9356dc;
 }
 .accueil .fonctionnement li span {
-  margin-left: 10px;
+  margin-left: 90px;
   font-weight: 700;
   display: flex;
 }
@@ -172,12 +172,10 @@ body {
   background: #f6f6f6;
 }
 .Restaurants h2 {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .Restaurants ul {
   padding: 0;
-  list-style: none;
-  margin: 0 10px;
 }
 .Restaurants li {
   position: relative;
@@ -193,7 +191,7 @@ body {
   background-color: #fff;
   border-radius: 25px;
   width: 100%;
-  margin: 0 0 20px;
+  margin: 8px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.6s ease, opacity 0.6s ease;
 }
@@ -429,156 +427,124 @@ body {
     flex-direction: row-reverse;
   }
 }
-.menu-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.menu-header img {
-  padding: 14px 50px;
-}
-.menu-header i.fa-solid {
-  color: #000;
-}
-
-.menu-main img {
-  width: 100%;
-}
-
-.background-section {
-  background-color: #f6f6f6;
-  margin-top: -50px;
-  position: relative;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-.background-section .menu-like {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.background-section .menu-like .heart-icon {
-  width: 32px;
-  height: 32px;
-  font-size: 20px;
-}
-.background-section .menu-like i {
-  position: absolute;
-}
-.background-section .menu-like .heart-empty {
-  opacity: 1;
-  z-index: 1;
-  font-size: 32px;
-  cursor: pointer;
-  transition: opacity ease-in-out 0.2;
-}
-.background-section .menu-like .heart-full {
-  opacity: 0;
-  z-index: 0;
-  transition: opacity 0.3s ease;
-  font-size: 32px;
-}
-.background-section .menu-like .heart-empty:hover {
-  opacity: 0;
-}
-.background-section .menu-like .heart-empty:hover + .heart-full {
-  opacity: 1;
-  color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.background-section .Entrées h2,
-.background-section .Plats h2,
-.background-section .Désserts h2 {
-  font-weight: 400;
-  margin-left: 20px;
-  font-family: Roboto;
-  font-size: 16px;
-}
-.background-section .Entrées h2 h2::after,
-.background-section .Plats h2 h2::after,
-.background-section .Désserts h2 h2::after {
-  content: "";
-  display: block;
-  width: 15%;
-  height: 2px;
-  background-color: #99e2d0;
-}
-.background-section .Entrées .container-content,
-.background-section .Plats .container-content,
-.background-section .Désserts .container-content {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  margin: 10px;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-}
-.background-section .text-content {
-  flex: 1;
-  border-radius: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-  z-index: 2;
-  margin-left: 10px;
-}
-.background-section .text-prix {
-  display: flex;
-  transition: all 0.4s;
-  transform: translateX(50%);
-  position: relative;
-  align-items: center;
-  z-index: 1;
-}
-.background-section .text-prix p {
-  margin-top: 60px;
-  margin-right: 100px;
-}
-.background-section .text-prix span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
-  height: 100%;
-  width: 50px;
-  position: absolute;
-  right: 0;
-  transition: transform 0.8s;
-}
-.background-section .text-prix span:hover .text-prix {
-  transform: translateX(0);
-}
-.background-section .text-prix span .fa-circle-check {
-  color: white;
-  font-size: 1.5rem;
-  transition: all 1s;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: center;
-}
-.background-section .text-prix span .fa-circle-check:hover {
-  transform: rotate(180deg);
-}
-.background-section .menu-button {
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (min-width: 769px) and (max-width: 1224px) {
-  .menu-main img {
-    height: 300px;
+@media screen and (max-width: 768px) {
+  .menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .menu-main .background-section {
-    margin-top: -80px;
-    margin-left: 50px;
-    margin-right: 50px;
+  .menu-header img {
+    padding: 14px 50px;
+  }
+  .menu-header i.fa-solid {
+    color: #000;
+  }
+  .menu-main img {
+    width: 100%;
+  }
+  .background-section {
+    background-color: #f6f6f6;
+    margin-top: -50px;
+    position: relative;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .background-section .menu-like {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .background-section .menu-like .heart-empty:hover {
+    opacity: 0;
+  }
+  .background-section .menu-like .heart-empty:hover .heart-full {
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .background-section .Entrées h2,
+  .background-section .Plats h2,
+  .background-section .Désserts h2 {
+    font-weight: 400;
+    margin-left: 20px;
+    font-family: Roboto;
+    font-size: 16px;
+  }
+  .background-section .Entrées h2 h2::after,
+  .background-section .Plats h2 h2::after,
+  .background-section .Désserts h2 h2::after {
+    content: "";
+    display: block;
+    width: 15%;
+    height: 2px;
+    background-color: #99e2d0;
+  }
+  .background-section .Entrées .container-content,
+  .background-section .Plats .container-content,
+  .background-section .Désserts .container-content {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .background-section .text-content {
+    flex: 1;
+    border-radius: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 2;
+    margin-left: 10px;
+  }
+  .background-section .text-prix {
+    display: flex;
+    transition: all 0.4s;
+    transform: translateX(0);
+    position: relative;
+    align-items: center;
+    z-index: 1;
+  }
+  .background-section .text-prix p {
+    margin-top: 60px;
+    margin-right: 100px;
+  }
+  .background-section .text-prix span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    right: -50px;
+    transition: transform 0.8s;
+  }
+  .background-section .text-prix span:hover .text-prix {
+    transform: translateX(-50px);
+  }
+  .background-section .text-prix span .fa-circle-check {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 1s;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+  }
+  .background-section .text-prix span .fa-circle-check:hover {
+    transform: rotate(180deg);
+  }
+  .background-section .menu-button {
+    display: flex;
+    justify-content: center;
   }
 }
 .heart-icon {
@@ -609,7 +575,7 @@ body {
   opacity: 0;
 }
 
-.heart-empty:hover + .heart-full {
+.heart-empty:hover .heart-full {
   opacity: 1;
   color: transparent;
   background-image: linear-gradient(#9356dc, #ff79da);
@@ -617,4 +583,4 @@ body {
   -webkit-background-clip: text;
 }
 
-/*# sourceMappingURL=ohmyfood.css.map */
+/*# sourceMappingURL=ohmyfood.map */
