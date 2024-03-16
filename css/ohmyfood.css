@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*import fichiers individuels*/
 body {
-  margin: 8px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 body {
-  margin: 8px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -164,6 +164,7 @@ body {
   margin-left: 10px;
   font-weight: 700;
   display: flex;
+  margin-right: 10px;
 }
 
 .Restaurants {
@@ -302,7 +303,7 @@ body {
   }
 }
 body {
-  margin: 8px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -334,7 +335,7 @@ body {
   }
 }
 body {
-  margin: 8px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -362,7 +363,7 @@ body {
 }
 
 body {
-  margin: 8px;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -404,11 +405,12 @@ body {
   margin: 0;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1224px) {
   .menu-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   .menu-footer h3 {
     font-size: 20px;
@@ -416,17 +418,19 @@ body {
   }
   .menu-footer ul {
     display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
   }
   .menu-footer p.information {
     white-space: nowrap;
     overflow: hidden;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1225px) and (max-width: 1440px) {
   .menu-footer {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .menu-footer .menu-footer .ul {
+    display: flex;
   }
 }
 .menu-header {
@@ -452,121 +456,181 @@ body {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
-.background-section .menu-like {
+
+.menu-like {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.background-section .menu-like .heart-icon {
+.menu-like .heart-icon {
   width: 32px;
   height: 32px;
   font-size: 20px;
 }
-.background-section .menu-like i {
+.menu-like i {
   position: absolute;
 }
-.background-section .menu-like .heart-empty {
+.menu-like .heart-empty {
   opacity: 1;
   z-index: 1;
   font-size: 32px;
   cursor: pointer;
   transition: opacity ease-in-out 0.2;
 }
-.background-section .menu-like .heart-full {
+.menu-like .heart-full {
   opacity: 0;
   z-index: 0;
   transition: opacity 0.3s ease;
   font-size: 32px;
 }
-.background-section .menu-like .heart-empty:hover {
+.menu-like .heart-empty:hover {
   opacity: 0;
 }
-.background-section .menu-like .heart-empty:hover + .heart-full {
+.menu-like .heart-empty:hover + .heart-full {
   opacity: 1;
   color: transparent;
   background-image: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
 }
-.background-section .Entrées h2,
-.background-section .Plats h2,
-.background-section .Désserts h2 {
+
+.Entrées,
+.Plats,
+.Désserts {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Entrées:nth-child(1),
+.Plats:nth-child(1),
+.Désserts:nth-child(1) {
+  animation-delay: 0s;
+}
+.Entrées:nth-child(2),
+.Plats:nth-child(2),
+.Désserts:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.Entrées:nth-child(3),
+.Plats:nth-child(3),
+.Désserts:nth-child(3) {
+  animation-delay: 1s;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Entrées h2,
+.Plats h2,
+.Désserts h2 {
   font-weight: 400;
   margin-left: 20px;
   font-family: Roboto;
   font-size: 16px;
 }
-.background-section .Entrées h2 h2::after,
-.background-section .Plats h2 h2::after,
-.background-section .Désserts h2 h2::after {
+.Entrées h2:after,
+.Plats h2:after,
+.Désserts h2:after {
   content: "";
   display: block;
   width: 15%;
   height: 2px;
   background-color: #99e2d0;
 }
-.background-section .Entrées .container-content,
-.background-section .Plats .container-content,
-.background-section .Désserts .container-content {
+.Entrées .container-content,
+.Plats .container-content,
+.Désserts .container-content {
   display: flex;
   align-items: center;
   background-color: #fff;
   margin: 10px;
   border-radius: 20px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
-.background-section .text-content {
+.Entrées .container-content:hover .text-prix,
+.Plats .container-content:hover .text-prix,
+.Désserts .container-content:hover .text-prix {
+  transform: translateX(0);
+}
+.Entrées .container-content .text-content,
+.Plats .container-content .text-content,
+.Désserts .container-content .text-content {
   flex: 1;
   border-radius: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   position: relative;
   z-index: 2;
   margin-left: 10px;
+  white-space: normal;
+  max-width: 220px;
 }
-.background-section .text-prix {
+.Entrées .container-content .text-content p,
+.Plats .container-content .text-content p,
+.Désserts .container-content .text-content p {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-width 0.4s ease-out;
+}
+.Entrées .container-content .text-content p .container-content:hover .text-content p,
+.Plats .container-content .text-content p .container-content:hover .text-content p,
+.Désserts .container-content .text-content p .container-content:hover .text-content p {
+  max-width: 100%;
+}
+.Entrées .container-content .text-prix,
+.Plats .container-content .text-prix,
+.Désserts .container-content .text-prix {
   display: flex;
   transition: all 0.4s;
-  transform: translateX(50%);
+  transform: translateX(59%);
   position: relative;
   align-items: center;
   z-index: 1;
+  height: 100px;
 }
-.background-section .text-prix p {
-  margin-top: 60px;
-  margin-right: 100px;
-}
-.background-section .text-prix span {
+.Entrées .container-content .text-prix p,
+.Plats .container-content .text-prix p,
+.Désserts .container-content .text-prix p {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 40px 0 0;
+  position: relative;
+  top: 20px;
+}
+.Entrées .container-content .text-prix .animation,
+.Plats .container-content .text-prix .animation,
+.Désserts .container-content .text-prix .animation {
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
   height: 100%;
   width: 50px;
-  position: absolute;
-  right: 0;
+  position: relative;
   transition: transform 0.8s;
 }
-.background-section .text-prix span:hover .text-prix {
-  transform: translateX(0);
-}
-.background-section .text-prix span .fa-circle-check {
+.Entrées .container-content .text-prix .animation .fa-circle-check,
+.Plats .container-content .text-prix .animation .fa-circle-check,
+.Désserts .container-content .text-prix .animation .fa-circle-check {
   color: white;
   font-size: 1.5rem;
   transition: all 1s;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: center;
+  position: absolute;
+  top: 45px;
+  left: 15px;
 }
-.background-section .text-prix span .fa-circle-check:hover {
+.Entrées .container-content .text-prix .animation .fa-circle-check:hover,
+.Plats .container-content .text-prix .animation .fa-circle-check:hover,
+.Désserts .container-content .text-prix .animation .fa-circle-check:hover {
   transform: rotate(180deg);
 }
-.background-section .menu-button {
+
+.menu-button {
   display: flex;
   justify-content: center;
 }

@@ -22,139 +22,172 @@
     position: relative;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+}
+.menu-like {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-    .menu-like {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        .heart-icon {
-            width: 32px;
-            height: 32px;
-            font-size: 20px;
-        }
-
-        i {
-            position: absolute;
-        }
-        .heart-empty {
-            opacity: 1;
-            z-index: 1;
-            font-size: 32px;
-            cursor: pointer;
-            transition: opacity ease-in-out 0.2;
-        }
-
-        .heart-full {
-            opacity: 0;
-            z-index: 0;
-            transition: opacity 0.3s ease;
-            font-size: 32px;
-        }
-        .heart-empty:hover {
-            opacity: 0;
-        }
-        .heart-empty:hover + .heart-full {
-            opacity: 1;
-            color: transparent;
-            background-image: linear-gradient(#9356dc, #ff79da);
-            background-clip: text;
-            -webkit-background-clip: text;
-        }
-    }
-    .Entrées,
-    .Plats,
-    .Désserts {
-        h2 {
-            font-weight: 400;
-            margin-left: 20px;
-            font-family: Roboto;
-            font-size: 16px;
-
-            h2::after {
-                content: "";
-                display: block;
-                width: 15%;
-                height: 2px;
-                background-color: #99e2d0;
-            }
-        }
-
-        .container-content {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            margin: 10px;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
+    .heart-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
     }
 
-    .text-content {
-        flex: 1;
-        border-radius: 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        position: relative;
-        z-index: 2;
-        margin-left: 10px;
+    i {
+        position: absolute;
     }
-    .text-prix {
-        display: flex;
-        transition: all 0.4s;
-        transform: translateX(50%);
-        position: relative;
-        align-items: center;
+    .heart-empty {
+        opacity: 1;
         z-index: 1;
-
-        p {
-            margin-top: 60px;
-            margin-right: 100px;
-        }
-        span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #99e2d0;
-            border-radius: 0 15px 15px 0;
-            height: calc(100%);
-            width: 50px;
-            position: absolute;
-            right: 0;
-            transition: transform 0.8s;
-
-            &:hover {
-                .text-prix {
-                    transform: translateX(0);
-                }
-            }
-            .fa-circle-check {
-                color: white;
-                font-size: 1.5rem;
-                transition: all 1s;
-                width: 30%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transform-origin: center;
-            }
-            .fa-circle-check:hover {
-                transform: rotate(180deg);
-            }
-        }
+        font-size: 32px;
+        cursor: pointer;
+        transition: opacity ease-in-out 0.2;
     }
 
-    .menu-button {
-        display: flex;
-        justify-content: center;
+    .heart-full {
+        opacity: 0;
+        z-index: 0;
+        transition: opacity 0.3s ease;
+        font-size: 32px;
+    }
+    .heart-empty:hover {
+        opacity: 0;
+    }
+    .heart-empty:hover + .heart-full {
+        opacity: 1;
+        color: transparent;
+        background-image: linear-gradient(#9356dc, #ff79da);
+        background-clip: text;
+        -webkit-background-clip: text;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1224px) {
-    .menu-header {
+.Entrées,
+.Plats,
+.Désserts {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    &:nth-child(1) {
+        animation-delay: 0s;
     }
+    &:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    &:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    h2 {
+        font-weight: 400;
+        margin-left: 20px;
+        font-family: Roboto;
+        font-size: 16px;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 15%;
+            height: 2px;
+            background-color: #99e2d0;
+        }
+    }
+    .container-content {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+        &:hover {
+            .text-prix {
+                transform: translateX(0);
+            }
+        }
+
+        .text-content {
+            flex: 1;
+            border-radius: 20px;
+            position: relative;
+            z-index: 2;
+            margin-left: 10px;
+            white-space: normal;
+            max-width: 220px;
+
+            p {
+                white-space: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: max-width 0.4s ease-out;
+
+                .container-content:hover .text-content p {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .text-prix {
+            display: flex;
+            transition: all 0.4s;
+            transform: translateX(59%);
+            position: relative;
+            align-items: center;
+            z-index: 1;
+            height: 100px;
+            p {
+                display: flex;
+                margin: 0 40px 0 0;
+                position: relative;
+                top: 20px;
+            }
+
+            .animation {
+                background-color: #99e2d0;
+                border-radius: 0 15px 15px 0;
+                height: 100%;
+                width: 50px;
+                position: relative;
+                transition: transform 0.8s;
+
+                .fa-circle-check {
+                    color: white;
+                    font-size: 1.5rem;
+                    transition: all 1s;
+                    position: absolute;
+                    top: 45px;
+                    left: 15px;
+
+                    &:hover {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+.menu-button {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1224px) {
     .menu-main {
         img {
             height: 300px;
