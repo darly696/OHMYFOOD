@@ -426,6 +426,8 @@ body {
 }
 @media screen and (min-width: 1225px) and (max-width: 1440px) {
   .menu-footer {
+    display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: center;
   }
@@ -570,7 +572,11 @@ body {
   z-index: 2;
   margin-left: 10px;
   white-space: normal;
-  max-width: 220px;
+}
+.Entrées .container-content .text-content .container-content:hover .text-content p,
+.Plats .container-content .text-content .container-content:hover .text-content p,
+.Désserts .container-content .text-content .container-content:hover .text-content p {
+  max-width: 100%;
 }
 .Entrées .container-content .text-content p,
 .Plats .container-content .text-content p,
@@ -580,21 +586,18 @@ body {
   text-overflow: ellipsis;
   transition: max-width 0.4s ease-out;
 }
-.Entrées .container-content .text-content p .container-content:hover .text-content p,
-.Plats .container-content .text-content p .container-content:hover .text-content p,
-.Désserts .container-content .text-content p .container-content:hover .text-content p {
-  max-width: 100%;
-}
 .Entrées .container-content .text-prix,
 .Plats .container-content .text-prix,
 .Désserts .container-content .text-prix {
   display: flex;
   transition: all 0.4s;
-  transform: translateX(59%);
-  position: relative;
+  transform: translateX(50%);
+  position: absolute;
   align-items: center;
   z-index: 1;
   height: 100px;
+  top: 0;
+  right: 0;
 }
 .Entrées .container-content .text-prix p,
 .Plats .container-content .text-prix p,
@@ -613,6 +616,9 @@ body {
   width: 50px;
   position: relative;
   transition: transform 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .Entrées .container-content .text-prix .animation .fa-circle-check,
 .Plats .container-content .text-prix .animation .fa-circle-check,
@@ -620,9 +626,7 @@ body {
   color: white;
   font-size: 1.5rem;
   transition: all 1s;
-  position: absolute;
-  top: 45px;
-  left: 15px;
+  transform: rotate(0deg);
 }
 .Entrées .container-content .text-prix .animation .fa-circle-check:hover,
 .Plats .container-content .text-prix .animation .fa-circle-check:hover,
@@ -643,6 +647,11 @@ body {
     margin-top: -80px;
     margin-left: 50px;
     margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1225px) and (max-width: 1440px) {
+  .menu-main img {
+    height: 300px;
   }
 }
 .heart-icon {
