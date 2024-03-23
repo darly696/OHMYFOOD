@@ -357,9 +357,18 @@ body {
   align-self: center;
   transition: background 0.5s ease;
 }
+@keyframes buttonHoverAnimation {
+  from {
+    opacity: 1;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  }
+}
 .button:hover {
-  opacity: 0.8;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  animation: buttonHoverAnimation 0.5s ease 0.1s;
 }
 
 body {
@@ -408,13 +417,12 @@ body {
 @media screen and (min-width: 769px) and (max-width: 1224px) {
   .menu-footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
   }
   .menu-footer h3 {
     font-size: 20px;
-    padding: 22px 2px 22px 25px;
   }
   .menu-footer ul {
     display: flex;
@@ -427,11 +435,10 @@ body {
 @media screen and (min-width: 1225px) and (max-width: 1440px) {
   .menu-footer {
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
   }
-  .menu-footer .menu-footer .ul {
+  .menu-footer ul {
     display: flex;
   }
 }
@@ -462,7 +469,8 @@ body {
 .menu-like {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
 }
 .menu-like .heart-icon {
   width: 32px;
@@ -504,27 +512,24 @@ body {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.Entrées:nth-child(1),
-.Plats:nth-child(1),
-.Désserts:nth-child(1) {
-  animation-delay: 0s;
-}
 .Entrées:nth-child(2),
 .Plats:nth-child(2),
 .Désserts:nth-child(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0s;
 }
 .Entrées:nth-child(3),
 .Plats:nth-child(3),
 .Désserts:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.Entrées:nth-child(4),
+.Plats:nth-child(4),
+.Désserts:nth-child(4) {
   animation-delay: 1s;
 }
 @keyframes fadeInUp {
   from {
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -534,16 +539,16 @@ body {
 .Plats h2,
 .Désserts h2 {
   font-weight: 400;
-  margin-left: 20px;
   font-family: Roboto;
   font-size: 16px;
+  margin-left: 20px;
 }
 .Entrées h2:after,
 .Plats h2:after,
 .Désserts h2:after {
   content: "";
   display: block;
-  width: 15%;
+  width: 40px;
   height: 2px;
   background-color: #99e2d0;
 }
@@ -553,7 +558,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #fff;
-  margin: 10px;
+  margin: 20px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -592,7 +597,6 @@ body {
   display: flex;
   transition: all 0.4s;
   transform: translateX(50%);
-  position: absolute;
   align-items: center;
   z-index: 1;
   height: 100px;
@@ -640,18 +644,42 @@ body {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1224px) {
+  .Entrées,
+  .Plats,
+  .Désserts {
+    max-width: 634px;
+    margin: auto;
+  }
   .menu-main img {
     height: 300px;
+    object-fit: cover;
   }
   .menu-main .background-section {
-    margin-top: -80px;
+    margin-top: -30px;
     margin-left: 50px;
     margin-right: 50px;
   }
+  .menu-main h2 {
+    margin-left: 25px;
+  }
 }
 @media screen and (min-width: 1225px) and (max-width: 1440px) {
+  .Entrées,
+  .Plats,
+  .Désserts {
+    max-width: 650px;
+    margin-left: 200px;
+  }
   .menu-main img {
-    height: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .menu-main .background-section {
+    max-width: 1053px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .heart-icon {

@@ -26,7 +26,8 @@
 .menu-like {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 
     .heart-icon {
         width: 32px;
@@ -71,13 +72,13 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
-    &:nth-child(1) {
+    &:nth-child(2) {
         animation-delay: 0s;
     }
-    &:nth-child(2) {
+    &:nth-child(3) {
         animation-delay: 0.5s;
     }
-    &:nth-child(3) {
+    &:nth-child(4) {
         animation-delay: 1s;
     }
 
@@ -85,9 +86,7 @@
         from {
             opacity: 0;
         }
-        50% {
-            opacity: 0.5;
-        }
+
         to {
             opacity: 1;
         }
@@ -95,14 +94,14 @@
 
     h2 {
         font-weight: 400;
-        margin-left: 20px;
         font-family: Roboto;
         font-size: 16px;
+        margin-left: 20px;
 
         &:after {
             content: "";
             display: block;
-            width: 15%;
+            width: 40px;
             height: 2px;
             background-color: #99e2d0;
         }
@@ -111,7 +110,7 @@
         display: flex;
         align-items: center;
         background-color: #fff;
-        margin: 10px;
+        margin: 20px;
         border-radius: 20px;
         overflow: hidden;
         position: relative;
@@ -145,7 +144,6 @@
             display: flex;
             transition: all 0.4s;
             transform: translateX(50%);
-            position: absolute;
             align-items: center;
             z-index: 1;
             height: 100px;
@@ -189,22 +187,46 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1224px) {
+    .Entrées,
+    .Plats,
+    .Désserts {
+        max-width: 634px;
+        margin: auto;
+    }
     .menu-main {
         img {
             height: 300px;
+            object-fit: cover;
         }
 
         .background-section {
-            margin-top: -80px;
+            margin-top: -30px;
             margin-left: 50px;
             margin-right: 50px;
+        }
+        h2 {
+            margin-left: 25px;
         }
     }
 }
 @media screen and (min-width: 1225px) and (max-width: 1440px) {
+    .Entrées,
+    .Plats,
+    .Désserts {
+        max-width: 650px;
+        margin-left: 200px;
+    }
     .menu-main {
         img {
-            height: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .background-section {
+            max-width: 1053px;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

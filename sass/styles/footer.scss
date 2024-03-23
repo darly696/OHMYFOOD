@@ -42,13 +42,12 @@
 @media screen and (min-width: 769px) and (max-width: 1224px) {
     .menu-footer {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
 
         h3 {
             font-size: 20px;
-            padding: 22px 2px 22px 25px;
         }
 
         ul {
@@ -60,15 +59,12 @@
         }
     }
 }
-
 @media screen and (min-width: 1225px) and (max-width: 1440px) {
     .menu-footer {
         display: flex;
-        align-items: center;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: center;
-
-        .menu-footer .ul {
+        ul {
             display: flex;
         }
     }
