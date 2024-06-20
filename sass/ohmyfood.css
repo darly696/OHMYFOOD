@@ -122,8 +122,6 @@ body {
 .accueil .fonctionnement {
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 .accueil .fonctionnement h2 {
   margin-left: 20px;
@@ -132,7 +130,6 @@ body {
 .accueil .fonctionnement ol {
   list-style: none;
   counter-reset: item;
-  padding: 0;
 }
 .accueil .fonctionnement li {
   font-family: Roboto;
@@ -143,6 +140,7 @@ body {
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
   margin: 20px;
 }
 .accueil .fonctionnement li::before {
@@ -176,15 +174,12 @@ body {
   font-weight: 700;
   display: flex;
   font-family: Roboto;
-  margin-right: 20px;
 }
 
 .Restaurants {
   display: flex;
   flex-direction: column;
   background: #f6f6f6;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 .Restaurants h2 {
   margin-left: 10px;
@@ -223,7 +218,8 @@ body {
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
   transition: transform 1s ease;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .Restaurants li figcaption {
   display: flex;
@@ -479,56 +475,6 @@ body {
     transform: scale(1, 1);
   }
 }
-.heart-icon {
-  width: 32px;
-  height: 32px;
-  font-size: 20px;
-  position: relative;
-}
-
-.heart-empty {
-  opacity: 1;
-  z-index: 1;
-  font-size: 32px;
-  cursor: pointer;
-  transition: fill 0.5s ease;
-}
-
-i {
-  position: absolute;
-}
-
-.heart-full {
-  opacity: 0;
-  z-index: 0;
-  transition: opacity 0.3s ease;
-  font-size: 32px;
-  animation: fillHeart 0.5s ease-in-out forwards;
-}
-
-.heart-empty::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  transition: background-color 0.5 ease;
-}
-
-.heart-empty:hover {
-  background-color: transparent;
-}
-
-.heart-empty:hover + .heart-full {
-  opacity: 1;
-  color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
 .menu-header {
   display: flex;
   align-items: center;
@@ -543,16 +489,14 @@ i {
 
 .menu-main img {
   width: 100%;
-  height: 300px;
 }
 
 .background-section {
   background-color: #f6f6f6;
-  margin: -50px auto 0;
+  margin-top: -50px;
   position: relative;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  max-width: 1000px;
 }
 
 .menu-like {
@@ -560,6 +504,37 @@ i {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+.menu-like .heart-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+}
+.menu-like i {
+  position: absolute;
+}
+.menu-like .heart-empty {
+  opacity: 1;
+  z-index: 1;
+  font-size: 32px;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.2;
+}
+.menu-like .heart-full {
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  font-size: 32px;
+}
+.menu-like .heart-empty:hover {
+  opacity: 0;
+}
+.menu-like .heart-empty:hover + .heart-full {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .Entrées,
@@ -569,8 +544,6 @@ i {
   animation-name: fadeInUp;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  max-width: 650px;
-  margin: 0 auto;
 }
 .Entrées:nth-child(2),
 .Plats:nth-child(2),
@@ -618,7 +591,7 @@ i {
   display: flex;
   align-items: center;
   background-color: #fff;
-  margin: 0 10px 20px 10px;
+  margin: 20px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -710,35 +683,39 @@ i {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1224px) {
-  .Entrées img,
-  .Plats img,
-  .Désserts .menu-main img {
-    height: 300px;
-    object-fit: cover;
+  .Entrées,
+  .Plats,
+  .Désserts {
+    max-width: 634px;
+    margin: auto;
   }
-  .Entrées .background-section,
-  .Plats .background-section,
-  .Désserts .menu-main .background-section {
+  .menu-main img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu-main .background-section {
     margin-top: -30px;
     margin-left: 50px;
     margin-right: 50px;
   }
-  .Entrées h2,
-  .Plats h2,
-  .Désserts .menu-main h2 {
+  .menu-main h2 {
     margin-left: 25px;
   }
 }
 @media screen and (min-width: 1225px) and (max-width: 1440px) {
-  .Entrées img,
-  .Plats img,
-  .Désserts .menu-main img {
-    height: 400px;
-    object-fit: cover;
+  .Entrées,
+  .Plats,
+  .Désserts {
+    max-width: 650px;
+    margin-left: 200px;
   }
-  .Entrées .background-section,
-  .Plats .background-section,
-  .Désserts .menu-main .background-section {
+  .menu-main img {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu-main .background-section {
     max-width: 1053px;
     display: flex;
     flex-direction: column;
@@ -794,6 +771,4 @@ i {
   background-image: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
-}
-
-/*# sourceMappingURL=ohmyfood.css.map */
+}/*# sourceMappingURL=ohmyfood.css.map */

@@ -60,12 +60,15 @@
             text-align: center;
             margin-top: 0px;
             font-size: 18px;
+            font-family: Roboto;
         }
     }
 
     .fonctionnement {
         display: flex;
         flex-direction: column;
+        max-width: 1000px;
+        margin: 0 auto;
 
         h2 {
             margin-left: 20px;
@@ -75,16 +78,18 @@
         ol {
             list-style: none;
             counter-reset: item;
+            padding: 0;
         }
         li {
+            font-family: Roboto;
             display: flex;
             height: 73px;
-            margin: 10px;
             align-items: center;
             position: relative;
             background-color: #f6f6f6;
             border-radius: 20px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            margin: 20px;
 
             &::before {
                 content: counter(item);
@@ -107,7 +112,7 @@
             }
 
             i {
-                margin-left: 40px;
+                margin-left: 30px;
                 color: #7e7e7e;
                 transition: color 0.3s ease;
 
@@ -116,10 +121,11 @@
                 }
             }
             span {
-                margin-left: 10px;
+                margin-left: 80px;
                 font-weight: 700;
                 display: flex;
-                margin-right: 10px;
+                font-family: Roboto;
+                margin-right: 20px;
             }
         }
     }
@@ -129,6 +135,8 @@
     display: flex;
     flex-direction: column;
     background: #f6f6f6;
+    max-width: 1000px;
+    margin: 0 auto;
 
     h2 {
         margin-left: 10px;
@@ -182,40 +190,7 @@
             font-family: Roboto;
             color: #000;
         }
-        .heart-icon {
-            width: 32px;
-            height: 32px;
-            font-size: 20px;
-            padding-right: 20px;
-        }
 
-        i {
-            position: absolute;
-        }
-        .heart-empty {
-            opacity: 1;
-            z-index: 1;
-            font-size: 32px;
-            cursor: pointer;
-            transition: opacity ease-in-out 0.2;
-        }
-
-        .heart-full {
-            opacity: 0;
-            z-index: 0;
-            transition: opacity 0.3s ease;
-            font-size: 32px;
-        }
-        .heart-empty:hover {
-            opacity: 0;
-        }
-        .heart-empty:hover + .heart-full {
-            opacity: 1;
-            color: transparent;
-            background-image: linear-gradient(#9356dc, #ff79da);
-            background-clip: text;
-            -webkit-background-clip: text;
-        }
         .info-resto {
             padding: 8px;
         }
@@ -237,6 +212,7 @@
     background-color: #99e2d0;
     color: #008766;
     z-index: 1;
+    font-family: Roboto;
 }
 
 /* Média query sup à 768px */
