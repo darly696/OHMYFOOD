@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*police*/
+/*couleurs*/
+.loader {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #99e2d0;
+  color: #9356dc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease 3s forwards;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards var(--delay);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    color: #ff79da;
+  }
+  to {
+    opacity: 1;
+    color: #9356dc;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    color: #9356dc;
+    height: 100%;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+.accueil .présentation {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+.accueil .présentation h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  font-family: Roboto;
+}
+.accueil .présentation p {
+  color: #353535;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 18px;
+  font-family: Roboto;
+}
+.accueil .fonctionnement {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.accueil .fonctionnement h2 {
+  margin-left: 20px;
+  font-family: Roboto;
+}
+.accueil .fonctionnement ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+.accueil .fonctionnement li {
+  font-family: Roboto;
+  display: flex;
+  height: 73px;
+  align-items: center;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+}
+.accueil .fonctionnement li::before {
+  content: counter(item);
+  counter-increment: item;
+  display: block;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  background-color: #9356dc;
+  color: #fff;
+}
+.accueil .fonctionnement li:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
+.accueil .fonctionnement li i {
+  margin-left: 30px;
+  color: #7e7e7e;
+  transition: color 0.3s ease;
+}
+.accueil .fonctionnement li i:hover {
+  color: #9356dc;
+}
+.accueil .fonctionnement li span {
+  margin-left: 80px;
+  font-weight: 700;
+  display: flex;
+  font-family: Roboto;
+  margin-right: 20px;
+}
+
+.Restaurants {
+  display: flex;
+  flex-direction: column;
+  background: #f6f6f6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.Restaurants h2 {
+  margin-left: 10px;
+}
+.Restaurants ul {
+  padding: 0;
+  list-style: none;
+  margin: 0 10px;
+}
+.Restaurants li {
+  position: relative;
+}
+.Restaurants li a {
+  text-decoration: none;
+}
+.Restaurants li figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: #fff;
+  border-radius: 25px;
+  width: 100%;
+  margin: 0 0 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.6s ease, opacity 0.6s ease;
+}
+.Restaurants li figure:hover {
+  box-shadow: 0px 4px 10px 5px #9356dc;
+  transform: scale(1);
+  opacity: 0.8;
+}
+.Restaurants li figure img {
+  width: 100%;
+  height: 231px;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  transition: transform 1s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Restaurants li figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: Roboto;
+  color: #000;
+}
+.Restaurants li .info-resto {
+  padding: 8px;
+}
+.Restaurants li .restaurant-title {
+  margin: 0px;
+}
+.Restaurants li .restaurant-location {
+  margin-top: 2px;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #99e2d0;
+  color: #008766;
+  z-index: 1;
+  font-family: Roboto;
+}
+
+/* Média query sup à 768px */
+@media screen and (min-width: 769px) {
+  body {
+    margin: 0 20px;
+  }
+  .présentation .h1-container {
+    white-space: nowrap;
+  }
+  .fonctionnement ol {
+    display: flex;
+    justify-content: space-around;
+  }
+  .fonctionnement ol .li {
+    flex: 1;
+  }
+  .Restaurants ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+  }
+  .Restaurants li {
+    width: calc(100% - 10px);
+  }
+  .Restaurants li figure {
+    width: 100%;
+  }
+  .Restaurants li .restaurant-location {
+    color: #000;
+  }
+}/*# sourceMappingURL=accueil.css.map */
