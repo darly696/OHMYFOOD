@@ -223,7 +223,8 @@ body {
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
   transition: transform 1s ease;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .Restaurants li figcaption {
   display: flex;
@@ -545,7 +546,8 @@ i {
 .menu-main img {
   width: 100%;
   height: 300px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .background-section {
@@ -562,7 +564,7 @@ i {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-family: Shrikhand;
+  font-family: Roboto;
 }
 
 .Entrées,
@@ -718,7 +720,8 @@ i {
   .Plats img,
   .Désserts .menu-main img {
     height: 300px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .Entrées .background-section,
   .Plats .background-section,
@@ -738,7 +741,8 @@ i {
   .Plats img,
   .Désserts .menu-main img {
     height: 400px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .Entrées .background-section,
   .Plats .background-section,
@@ -799,6 +803,4 @@ i {
   background-image: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
-}
-
-/*# sourceMappingURL=ohmyfood.css.map */
+}/*# sourceMappingURL=ohmyfood.css.map */
